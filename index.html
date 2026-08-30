@@ -1,454 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <!-- DentaCore standalone landing page: calm editorial healthcare, ivory/navy/teal/brass. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DentaCore — برنامج عملي لإدارة عيادات الأسنان.">
   <title>DentaCore System — إدارة عيادات الأسنان</title>
-  <meta name="description" content="DentaCore يجمع المرضى والمواعيد والسجل الطبي في مساحة واحدة، حتى يظل تركيزك على المريض لا على البحث بين الملفات." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ============================================
-       الهيدر (شريط التنقل العلوي)
-       لتغيير الروابط: عدّل قسم <nav> تحت
-       لتغيير الزر "تحدث معنا": عدّل class="header-cta"
-       ============================================ -->
-  <header class="site-header" id="siteHeader">
+  <header class="site-header" id="top">
     <div class="shell header-inner">
-      <a class="brand-lockup" href="#top">
-        <span class="brand-mark" aria-hidden="true">
-          <span class="tooth-mark" aria-hidden="true"><i>✓</i></span>
-        </span>
-        <span class="brand-copy">
-          <strong>DentaCore</strong>
-          <small>نظام إدارة عيادات الأسنان</small>
-        </span>
+      <a class="brand" href="#top" aria-label="DentaCore">
+        <span class="brand-mark" aria-hidden="true"><span class="tooth-shape"><i>✓</i></span></span>
+        <span><strong>DentaCore</strong><small>نظام إدارة عيادات الأسنان</small></span>
       </a>
-
-      <nav class="desktop-nav" id="desktopNav" aria-label="التنقل الرئيسي">
+      <nav class="nav" id="nav" aria-label="التنقل الرئيسي">
         <a href="#why">لماذا DentaCore؟</a>
         <a href="#features">المميزات</a>
         <a href="#workflow">طريقة العمل</a>
         <a href="#contact">تواصل معنا</a>
       </nav>
-
       <div class="header-actions">
-        <a class="header-cta" href="#contact">تحدث معنا
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-        </a>
-        <button class="menu-toggle" type="button" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">
-          <svg class="icon-menu" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-          <svg class="icon-close" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-        </button>
+        <a class="header-link" href="#contact">تحدث معنا <span>↖</span></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
       </div>
     </div>
   </header>
 
-  <main id="top">
-
-    <!-- ============================================
-         قسم الهيرو (أول ما الزائر يشوفه)
-         لتغيير العنوان: <h1>...</h1>
-         لتغيير الوصف: hero-description
-         لتغيير الأزرار: hero-actions
-         ============================================ -->
-    <section class="hero-section">
-      <div class="hero-noise" aria-hidden="true"></div>
+  <main>
+    <section class="hero section-pad">
       <div class="shell hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-rule"></span>نظام تشغيل يوم العيادة</div>
-          <h1>يوم العيادة يبدأ من شاشة أوضح.</h1>
-          <p class="hero-description">
-            DentaCore يجمع المرضى والمواعيد والسجل الطبي والتقارير في مساحة واحدة، حتى يظل تركيزك على المريض لا على البحث بين الملفات.
-          </p>
+          <div class="eyebrow"><span></span>نظام تشغيل يوم العيادة</div>
+          <h1>إدارة عيادتك<br>من مكان واحد.</h1>
+          <p>DentaCore يساعدك على إدارة المرضى والمواعيد والسجلات والتقارير من شاشة واحدة.</p>
           <div class="hero-actions">
-            <a class="button button--primary" href="#features">استكشف المميزات
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-            </a>
-            <a class="text-link" href="#workflow">شاهد طريقة العمل <span aria-hidden="true">↙</span></a>
+            <a class="button button-primary" href="#features">استكشف المميزات <span>←</span></a>
+            <a class="text-link" href="#workflow">شاهد طريقة العمل <span>↙</span></a>
+            <!-- غيّر الرابط إلى رابط GitHub Releases أو رابط التحميل الحقيقي -->
+            <a class="button button-download" href="https://github.com/USERNAME/REPOSITORY/releases/latest">تحميل البرنامج <span>↓</span></a>
           </div>
-          <div class="hero-note">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-            مصمم لعيادات الأسنان التي تريد تنظيمًا عمليًا بلا تعقيد.
-          </div>
+          <div class="hero-note"><span class="check-dot">✓</span> برنامج عملي لإدارة عيادات الأسنان.</div>
         </div>
-
-        <div class="hero-visual-wrap">
-          <div class="hero-visual-label"><span>01</span><span>نقطة تشغيل واحدة</span></div>
-          <div class="hero-visual">
-            <!-- لو عايز تحط صورة حقيقية بدل placeholder، حط src في img واستبدل div الـ placeholder -->
-            <!-- <img src="images/hero.jpg" alt="الواجهة الرئيسية" /> -->
-            <div class="editable-visual" aria-label="خانة صورة: الواجهة الرئيسية">
-              <div class="placeholder-window" aria-hidden="true">
-                <div class="placeholder-toolbar"><span></span><span></span><span></span></div>
-                <div class="placeholder-body"><i></i><i></i><i></i><i></i></div>
-              </div>
-              <span>الواجهة الرئيسية</span>
-            </div>
-            <div class="hero-visual-card hero-visual-card--top">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>الموعد القادم</span><strong>10:30</strong>
-            </div>
-            <div class="hero-visual-card hero-visual-card--bottom">
-              <span class="status-dot"></span> <span>اليوم مرتب</span><strong>+24</strong>
-            </div>
+        <div class="hero-media-wrap">
+          <div class="media-label"><span>01 / شاشة البرنامج</span><span>نقطة تشغيل واحدة</span></div>
+          <div class="media-frame hero-media">
+            <!-- ضع صورة الشاشة الرئيسية هنا: images/dashboard.png -->
+            <img src="images/dashboard.png" alt="صورة الشاشة الرئيسية" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="media-placeholder"><div class="mock-window"><div class="mock-top"><i></i><i></i><i></i></div><div class="mock-panels"><b></b><b></b><b></b><b></b></div></div><strong>ضع صورة الشاشة الرئيسية هنا</strong><small>images/dashboard.png</small></div>
+            <div class="media-badge"><strong>24+</strong><span>اليوم قريب</span></div>
           </div>
-          <div class="hero-caption"><span>واجهة عملية</span><span>مصممة لروتين العيادة الحقيقي</span></div>
-        </div>
-      </div>
-      <div class="hero-scroll-cue"><span>مرر للاستكشاف</span><span class="scroll-line"></span></div>
-    </section>
-
-    <!-- ============================================
-         شريط الثقة
-         لتغيير النص: <p>...</p>
-         ============================================ -->
-    <section class="trust-strip" aria-label="نظرة عامة">
-      <div class="shell trust-inner">
-        <span class="trust-label">DentaCore System</span>
-        <span class="trust-line"></span>
-        <p>كل ما تحتاجه لإدارة اليوم — في مكان واحد</p>
-        <div class="trust-icons">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
+          <div class="media-caption">واجهة البرنامج الرئيسية <span>لقطة من داخل النظام</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================
-         قسم "لماذا DentaCore"
-         لتغيير العنوان: <h2>...</h2>
-         لتغيير القائمة: <ul class="check-list">
-         ============================================ -->
-    <section class="why-section section-pad" id="why">
-      <div class="shell why-grid">
-        <div class="section-marker"><span>01</span><i></i></div>
-        <div class="why-copy">
-          <div class="eyebrow"><span class="eyebrow-rule"></span>الفكرة</div>
-          <h2>أقل وقتًا في البحث. مساحة أكبر للرعاية.</h2>
-          <p>بدل الانتقال بين قوائم متفرقة، يمنحك DentaCore صورة واحدة لحركة العيادة: من أول موعد في اليوم إلى آخر ملاحظة في سجل المريض.</p>
-          <ul class="check-list">
-            <li><span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>واجهة واضحة لفريق الاستقبال والطبيب.</li>
-            <li><span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>بيانات مرتبة يمكن الوصول إليها في خطوات قليلة.</li>
-            <li><span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>تنبيهات تساعد على تقليل أخطاء تداخل المواعيد.</li>
-          </ul>
-          <a class="arrow-link" href="#features">اعرف كيف يعمل
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-          </a>
+    <section class="why section-pad" id="why">
+      <div class="shell split-grid">
+        <div class="section-copy">
+          <div class="eyebrow"><span></span>01 / الفكرة</div>
+          <h2>كل بيانات العيادة<br>في مكان واحد.</h2>
+          <p>اعرض المواعيد والمرضى والسجلات من شاشة واضحة بدل البحث في ملفات متفرقة.</p>
+          <ul class="check-list"><li>واجهة بسيطة للطبيب والاستقبال.</li><li>الوصول إلى البيانات بسرعة.</li><li>فحص للتعارض قبل حفظ الموعد.</li></ul>
+          <a class="text-link" href="#features">اعرف المميزات <span>↙</span></a>
         </div>
-        <div class="why-visual">
-          <div class="image-frame image-frame--tilted">
-            <div class="editable-visual" aria-label="خانة صورة: ملفات المرضى">
-              <div class="placeholder-window" aria-hidden="true">
-                <div class="placeholder-toolbar"><span></span><span></span><span></span></div>
-                <div class="placeholder-body"><i></i><i></i><i></i><i></i></div>
-              </div>
-              <span>ملفات المرضى</span>
-            </div>
-          </div>
-          <div class="floating-stamp">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-            <span>أوضح<br />كل يوم</span>
-          </div>
-          <span class="image-index">D / 01</span>
+        <div class="media-frame secondary-media">
+          <!-- ضع صورة توضح إدارة المرضى هنا: images/patients.png -->
+          <img src="images/patients.png" alt="صورة إدارة المرضى" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div class="media-placeholder"><div class="mock-window"><div class="mock-top"><i></i><i></i><i></i></div><div class="mock-lines"><b></b><b></b><b></b><b></b></div></div><strong>ضع صورة إدارة المرضى هنا</strong><small>images/patients.png</small></div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================
-         قسم المميزات (الأكبر)
-         كل ميزة = article واحد بـ class="feature-row"
-         لو عايز تضيف ميزة: انسخ article وعدّل المحتوى
-         لو عايز تشيل ميزة: امسح الـ article كله
-         ============================================ -->
-    <section class="features-section section-pad" id="features">
+    <section class="features section-pad" id="features">
       <div class="shell">
-        <div class="section-intro section-intro--split">
-          <div>
-            <div class="eyebrow"><span class="eyebrow-rule"></span>02 / المميزات</div>
-            <h2>الأدوات التي تخفف<br /><em>ثقل اليوم.</em></h2>
-          </div>
-          <p>كل ميزة في DentaCore موجودة لسبب عملي: أن تصل للمعلومة أسرع، وأن ترى الخطوة التالية بوضوح.</p>
-        </div>
-
+        <div class="section-heading"><div class="eyebrow"><span></span>02 / المميزات</div><h2>الأدوات التي تخفف<br><em>ثقل اليوم.</em></h2><p>وظائف أساسية تساعدك على تنظيم العمل اليومي داخل العيادة.</p></div>
         <div class="feature-list">
-
-          <!-- ميزة 1 -->
-          <article class="feature-row">
-            <div class="feature-number">02</div>
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
-            </div>
-            <div class="feature-text">
-              <h3>لوحة تحكم تقرأ يومك بسرعة</h3>
-              <p>ابدأ من ملخص واضح للمواعيد والمرضى والتنبيهات القريبة، ثم انتقل إلى التفاصيل عندما تحتاجها.</p>
-              <span class="feature-note">كل ما يهمك يظهر قبل أن تبدأ التفاصيل.</span>
-            </div>
-            <div class="feature-image">
-              <div class="editable-visual" aria-label="خانة صورة: ميزة 02">
-                <div class="placeholder-window" aria-hidden="true">
-                  <div class="placeholder-toolbar"><span></span><span></span><span></span></div>
-                  <div class="placeholder-body"><i></i><i></i><i></i><i></i></div>
-                </div>
-                <span>ميزة 02</span>
-              </div>
-            </div>
-            <svg class="feature-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-          </article>
-
-          <!-- ميزة 2 -->
-          <article class="feature-row">
-            <div class="feature-number">03</div>
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div class="feature-text">
-              <h3>ملفات مرضى مرتبة وقابلة للبحث</h3>
-              <p>سجل البيانات الأساسية، ابحث بالاسم أو الهاتف، وافتح السجل الطبي أو ابدأ حجزًا جديدًا من نفس المكان.</p>
-              <span class="feature-note">معلومة المريض تصل إليها من مكان واحد.</span>
-            </div>
-            <div class="feature-image">
-              <div class="editable-visual" aria-label="خانة صورة: ميزة 03">
-                <div class="placeholder-window" aria-hidden="true">
-                  <div class="placeholder-toolbar"><span></span><span></span><span></span></div>
-                  <div class="placeholder-body"><i></i><i></i><i></i><i></i></div>
-                </div>
-                <span>ميزة 03</span>
-              </div>
-            </div>
-            <svg class="feature-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-          </article>
-
-          <!-- ميزة 3 -->
-          <article class="feature-row">
-            <div class="feature-number">04</div>
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
-            </div>
-            <div class="feature-text">
-              <h3>مواعيد منظمة بلا تداخل</h3>
-              <p>أنشئ الموعد مع الطبيب والخدمة والمدة، ودع فحص التعارض ينبهك قبل أن يتكرر الحجز في نفس الوقت.</p>
-              <span class="feature-note">الموعد الواضح يبدأ بوقت مضبوط.</span>
-            </div>
-            <div class="feature-image">
-              <div class="editable-visual" aria-label="خانة صورة: ميزة 04">
-                <div class="placeholder-window" aria-hidden="true">
-                  <div class="placeholder-toolbar"><span></span><span></span><span></span></div>
-                  <div class="placeholder-body"><i></i><i></i><i></i><i></i></div>
-                </div>
-                <span>ميزة 04</span>
-              </div>
-            </div>
-            <svg class="feature-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-          </article>
-
-          <!-- ميزة 4 -->
-          <article class="feature-row">
-            <div class="feature-number">05</div>
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13a3.5 3.5 0 0 0 5 0l.5-1 1.5 2-1 1.5c-2 2-5 2-7 0Z"/></svg>
-            </div>
-            <div class="feature-text">
-              <h3>سجل طبي يعود إليه الفريق</h3>
-              <p>أضف الزيارات والإجراءات والملاحظات في سجل واحد يساعدك على فهم تاريخ المريض قبل الزيارة الحالية.</p>
-              <span class="feature-note">كل زيارة تضيف معنى للملف.</span>
-            </div>
-            <div class="feature-image">
-              <div class="editable-visual" aria-label="خانة صورة: ميزة 05">
-                <div class="placeholder-window" aria-hidden="true">
-                  <div class="placeholder-toolbar"><span></span><span></span><span></span></div>
-                  <div class="placeholder-body"><i></i><i></i><i></i><i></i></div>
-                </div>
-                <span>ميزة 05</span>
-              </div>
-            </div>
-            <svg class="feature-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-          </article>
-
-          <!-- ميزة 5 -->
-          <article class="feature-row">
-            <div class="feature-number">06</div>
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
-            </div>
-            <div class="feature-text">
-              <h3>إدارة الأطباء والتخصصات</h3>
-              <p>نظّم بيانات الأطباء واربط كل موعد بالطبيب المناسب، لتظل المسؤوليات واضحة داخل العيادة.</p>
-              <span class="feature-note">كل طبيب وكل مسؤولية في مكانها.</span>
-            </div>
-            <div class="feature-image">
-              <div class="editable-visual" aria-label="خانة صورة: ميزة 06">
-                <div class="placeholder-window" aria-hidden="true">
-                  <div class="placeholder-toolbar"><span></span><span></span><span></span></div>
-                  <div class="placeholder-body"><i></i><i></i><i></i><i></i></div>
-                </div>
-                <span>ميزة 06</span>
-              </div>
-            </div>
-            <svg class="feature-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-          </article>
-
-          <!-- ميزة 6 -->
-          <article class="feature-row">
-            <div class="feature-number">07</div>
-            <div class="feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 16c2-4 4-6 6-6s2 4 4 4 2-2 4-2"/></svg>
-            </div>
-            <div class="feature-text">
-              <h3>تقارير تساعدك على المتابعة</h3>
-              <p>راجع ملخصات النشاط واطبع التقرير عند الحاجة، لتتحول بيانات التشغيل إلى صورة أسهل للفهم.</p>
-              <span class="feature-note">الصورة اليومية تصبح أسهل في القراءة.</span>
-            </div>
-            <div class="feature-image">
-              <div class="editable-visual" aria-label="خانة صورة: ميزة 07">
-                <div class="placeholder-window" aria-hidden="true">
-                  <div class="placeholder-toolbar"><span></span><span></span><span></span></div>
-                  <div class="placeholder-body"><i></i><i></i><i></i><i></i></div>
-                </div>
-                <span>ميزة 07</span>
-              </div>
-            </div>
-            <svg class="feature-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-          </article>
-
+          <article class="feature-row"><div class="feature-text"><span class="feature-number">02</span><h3>لوحة تحكم واضحة</h3><p>تابع المواعيد والمرضى والتنبيهات القريبة من الشاشة الرئيسية.</p></div><div class="feature-image"><img src="images/dashboard.png" alt="لوحة التحكم" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="media-placeholder"><div class="mini-ui"></div><strong>صورة لوحة التحكم</strong><small>images/dashboard.png</small></div></div></article>
+          <article class="feature-row"><div class="feature-text"><span class="feature-number">03</span><h3>إدارة المرضى</h3><p>أضف بيانات المرضى وابحث بالاسم أو الهاتف وافتح سجل المريض بسهولة.</p></div><div class="feature-image"><img src="images/patients.png" alt="إدارة المرضى" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="media-placeholder"><div class="mini-ui"></div><strong>صورة قائمة المرضى</strong><small>images/patients.png</small></div></div></article>
+          <article class="feature-row"><div class="feature-text"><span class="feature-number">04</span><h3>حجز المواعيد</h3><p>أنشئ الموعد وحدد الطبيب والمدة، مع تنبيه عند وجود تعارض.</p></div><div class="feature-image"><img src="images/appointments.png" alt="حجز المواعيد" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="media-placeholder"><div class="mini-ui"></div><strong>صورة المواعيد</strong><small>images/appointments.png</small></div></div></article>
+          <article class="feature-row"><div class="feature-text"><span class="feature-number">05</span><h3>السجل الطبي</h3><p>سجل الزيارات والإجراءات والملاحظات في ملف المريض.</p></div><div class="feature-image"><img src="images/medical-record.png" alt="السجل الطبي" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="media-placeholder"><div class="mini-ui"></div><strong>صورة السجل الطبي</strong><small>images/medical-record.png</small></div></div></article>
+          <article class="feature-row"><div class="feature-text"><span class="feature-number">06</span><h3>إدارة الأطباء</h3><p>احفظ بيانات الأطباء واربط كل موعد بالطبيب المناسب.</p></div><div class="feature-image"><img src="images/doctors.png" alt="إدارة الأطباء" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="media-placeholder"><div class="mini-ui"></div><strong>صورة الأطباء</strong><small>images/doctors.png</small></div></div></article>
+          <article class="feature-row"><div class="feature-text"><span class="feature-number">07</span><h3>التقارير</h3><p>راجع ملخصات العمل واطبع التقارير عند الحاجة.</p></div><div class="feature-image"><img src="images/reports.png" alt="التقارير" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="media-placeholder"><div class="mini-ui"></div><strong>صورة التقارير</strong><small>images/reports.png</small></div></div></article>
         </div>
       </div>
     </section>
 
-    <!-- ============================================
-         قسم "طريقة العمل" (الخطوات)
-         لتغيير الخطوات: عدّل step-item تحت
-         ============================================ -->
-    <section class="workflow-section section-pad" id="workflow">
-      <div class="shell workflow-grid">
-        <div class="workflow-visual">
-          <div class="workflow-image">
-            <div class="editable-visual" aria-label="خانة صورة: تنظيم المواعيد">
-              <div class="placeholder-window" aria-hidden="true">
-                <div class="placeholder-toolbar"><span></span><span></span><span></span></div>
-                <div class="placeholder-body"><i></i><i></i><i></i><i></i></div>
-              </div>
-              <span>تنظيم المواعيد</span>
-            </div>
-          </div>
-          <div class="workflow-callout">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-            <span>ابحث، احجز، تابع</span>
-          </div>
-          <div class="workflow-index">02 <span>/ 04</span></div>
+    <section class="workflow section-pad" id="workflow">
+      <div class="shell split-grid workflow-grid">
+        <div class="media-frame workflow-media">
+          <!-- ضع صورة خطوات العمل هنا: images/workflow.png -->
+          <img src="images/workflow.png" alt="طريقة العمل" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div class="media-placeholder"><div class="mock-window"><div class="mock-top"><i></i><i></i><i></i></div><div class="mock-lines"><b></b><b></b><b></b><b></b></div></div><strong>ضع صورة طريقة العمل هنا</strong><small>images/workflow.png</small></div>
         </div>
-        <div class="workflow-copy">
-          <div class="eyebrow"><span class="eyebrow-rule"></span>08 / طريقة العمل</div>
-          <h2>من الحجز إلى السجل — في مسار واحد.</h2>
-          <p>صُممت الخطوات اليومية لتكون مباشرة: افتح، ابحث، احجز، حدّث، ثم راجع الصورة الكاملة عندما تحتاجها.</p>
-          <div class="steps-list">
-            <div class="step-item">
-              <span class="step-number">01</span>
-              <div>
-                <h3>اعرف يومك</h3>
-                <p>راجع لوحة التحكم والمواعيد القريبة قبل بدء الزحام.</p>
-              </div>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-            <div class="step-item">
-              <span class="step-number">02</span>
-              <div>
-                <h3>افتح الملف الصحيح</h3>
-                <p>ابحث عن المريض بالاسم أو رقم الهاتف خلال ثوانٍ.</p>
-              </div>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-            <div class="step-item">
-              <span class="step-number">03</span>
-              <div>
-                <h3>احجز بثقة</h3>
-                <p>حدد الطبيب والمدة ودع النظام ينبهك عند وجود تعارض.</p>
-              </div>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-            <div class="step-item">
-              <span class="step-number">04</span>
-              <div>
-                <h3>اترك أثرًا منظمًا</h3>
-                <p>حدّث حالة الموعد وأضف الإجراء إلى السجل الطبي.</p>
-              </div>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-          </div>
+        <div class="section-copy">
+          <div class="eyebrow"><span></span>08 / طريقة العمل</div><h2>خطوات العمل<br>اليومية.</h2><p>افتح لوحة التحكم، ابحث عن المريض، احجز الموعد، ثم حدّث السجل.</p>
+          <div class="steps"><div><b>01</b><strong>اعرف يومك</strong><span>راجع لوحة التحكم والمواعيد القريبة.</span></div><div><b>02</b><strong>افتح الملف الصحيح</strong><span>ابحث بالاسم أو رقم الهاتف.</span></div><div><b>03</b><strong>احجز</strong><span>حدد الطبيب والمدة وتأكد من عدم التعارض.</span></div><div><b>04</b><strong>حدّث السجل</strong><span>أضف الإجراء أو الملاحظة في ملف المريض.</span></div></div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================
-         قسم "لماذا الآن"
-         ============================================ -->
-    <section class="proof-section section-pad">
-      <div class="shell proof-grid">
-        <div class="proof-aside">
-          <span class="proof-kicker">DentaCore / 2026</span>
-          <div class="proof-line"></div>
-          <span class="proof-small">نظام إدارة<br />لعيادات الأسنان</span>
-        </div>
-        <div class="proof-content">
-          <div class="eyebrow"><span class="eyebrow-rule"></span>لماذا الآن؟</div>
-          <h2>كل دقيقة تستعيدها<br />تعود إلى <em>المريض.</em></h2>
-          <p>لا يحتاج فريقك إلى نظام معقد حتى يعمل بتنظيم. يحتاج إلى شاشة تفهم إيقاع العيادة وتبقي التفاصيل في متناول اليد.</p>
-          <div class="proof-points">
-            <div><strong>01</strong><span>وضوح في كل خطوة</span></div>
-            <div><strong>02</strong><span>بيانات في مكان واحد</span></div>
-            <div><strong>03</strong><span>روتين أسهل للفريق</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         قسم الختام والدعوة للتواصل
-         لتغيير الإيميل: عدّل href="mailto:..."
-         ============================================ -->
-    <section class="closing-section section-pad" id="contact">
-      <div class="shell closing-panel">
-        <div class="closing-mark">
-          <span class="tooth-mark" aria-hidden="true"><i>✓</i></span>
-        </div>
-        <div class="closing-copy">
-          <div class="eyebrow"><span class="eyebrow-rule"></span>09 / الخطوة التالية</div>
-          <h2>خلّي إدارة العيادة أبسط من أول موعد.</h2>
-          <p>اكتشف كيف يمكن لـ DentaCore أن يرتب يومك ويمنح فريقك نقطة رجوع واحدة لكل معلومة مهمة.</p>
-        </div>
-        <a class="button button--light" href="mailto:contact@dentacore.example">اطلب عرضًا للبرنامج
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-        </a>
-      </div>
-    </section>
+    <section class="closing" id="contact"><div class="shell closing-inner"><span class="closing-mark"><span class="tooth-shape">✓</span></span><div><div class="eyebrow light"><span></span>09 / الخطوة التالية</div><h2>ابدأ بتنظيم عيادتك.</h2><p>تعرّف على DentaCore وشاهد كيف يناسب طريقة عمل عيادتك.</p></div><a class="button button-light" href="mailto:contact@dentacore.example">اطلب عرضًا للبرنامج <span>←</span></a></div></section>
   </main>
 
-  <!-- ============================================
-       الفوتر (الجزء السفلي)
-       لتغيير الإيميل/اللينكات: عدّل هنا مباشرة
-       ============================================ -->
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <div class="footer-brand">
-        <span class="brand-mark brand-mark--footer">
-          <span class="tooth-mark" aria-hidden="true"><i>✓</i></span>
-        </span>
-        <div>
-          <strong>DentaCore</strong>
-          <small>نظام عملي لإدارة عيادات الأسنان — واضح للفريق، ومريح في الاستخدام اليومي.</small>
-        </div>
-      </div>
-      <div class="footer-meta">
-        <span>عدّل بيانات التواصل هنا قبل النشر.</span>
-        <span>© <span id="year"></span> DentaCore System</span>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer"><div class="shell footer-inner"><div class="brand"><span class="brand-mark"><span class="tooth-shape">✓</span></span><span><strong>DentaCore</strong><small>نظام عملي لإدارة عيادات الأسنان</small></span></div><span>© <span id="year"></span> DentaCore System</span></div></footer>
 
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="إغلاق الصورة">×</button>
+    <img id="lightboxImage" src="" alt="">
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

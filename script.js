@@ -1,71 +1,71 @@
-// DentaCore Landing Page — minimal interactive script
-// يتعامل مع: 1) تأثير الهيدر عند الـ scroll
-//              2) قائمة الموبايل (open/close)
-//              3) الـ smooth scroll للروابط الداخلية
-//              4) تحديث السنة تلقائياً في الفوتر
-
+/* DentaCore standalone landing page — minimal behavior, calm interactions, no framework. */
 (function () {
-  'use strict';
-
-  // ====== 1) تأثير الهيدر عند الـ scroll ======
-  const header = document.getElementById('siteHeader');
-  const setScrolledState = () => {
-    if (!header) return;
-    if (window.scrollY > 24) {
-      header.classList.add('site-header--scrolled');
-    } else {
-      header.classList.remove('site-header--scrolled');
-    }
-  };
-  setScrolledState();
-  window.addEventListener('scroll', setScrolledState, { passive: true });
-
-  // ====== 2) قائمة الموبايل ======
+  const header = document.querySelector('.site-header');
   const menuToggle = document.getElementById('menuToggle');
-  const desktopNav = document.getElementById('desktopNav');
-  if (menuToggle && desktopNav) {
-    const closeMenu = () => {
-      desktopNav.classList.remove('desktop-nav--open');
-      menuToggle.classList.remove('is-open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'فتح القائمة');
-    };
-    const openMenu = () => {
-      desktopNav.classList.add('desktop-nav--open');
-      menuToggle.classList.add('is-open');
-      menuToggle.setAttribute('aria-expanded', 'true');
-      menuToggle.setAttribute('aria-label', 'إغلاق القائمة');
-    };
-    menuToggle.addEventListener('click', () => {
-      if (desktopNav.classList.contains('desktop-nav--open')) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
+  const nav = document.getElementById('nav');
+  const year = document.getElementById('year');
+
+  if (year) year.textContent = new Date().getFullYear();
+
+  window.addEventListener('scroll', function () {
+    if (header) header.classList.toggle('scrolled', window.scrollY > 16);
+  }, { passive: true });
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function () {
+      const open = nav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+      menuToggle.textContent = open ? '×' : '☰';
     });
-    // إغلاق القائمة لما المستخدم يضغط على لينك
-    desktopNav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', closeMenu);
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'فتح القائمة');
+        menuToggle.textContent = '☰';
+      });
     });
   }
 
-  // ====== 3) Smooth scroll للروابط الداخلية (مع مراعاة الـ header الثابت) ======
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', (event) => {
-      const href = anchor.getAttribute('href');
-      if (!href || href === '#') return;
-      const target = document.querySelector(href);
-      if (!target) return;
-      event.preventDefault();
-      const headerHeight = header ? header.offsetHeight : 0;
-      const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight + 1;
-      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    if (lightboxImage) lightboxImage.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.media-frame img, .feature-image img').forEach(function (image) {
+    image.addEventListener('click', function () {
+      if (!lightbox || !lightboxImage || image.style.display === 'none') return;
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
     });
   });
 
-  // ====== 4) تحديث السنة تلقائياً في الفوتر ======
-  const yearEl = document.getElementById('year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) lightbox.addEventListener('click', function (event) {
+    if (event.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeLightbox();
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
 })();
